@@ -1,0 +1,37 @@
+<ion-view view-title="localStorage">
+  <ion-nav-bar class="bar-calm">
+
+  </ion-nav-bar>
+  <ion-content class="padding">
+
+      <p ng-repeat="data in storedData track by $index">  
+        <div ng-show='avataa'>
+          <img class="capture" src="img/{{data.avata}}.jpg" width="200px" ng-click='randomeII()'> 
+        </div>
+        <div ng-show='!avataa'>
+          <img class="capture" src="img/{{randomeImage}}.jpg" width="200px" ng-click='randomeII()'> 
+        </div>  
+        <ion-item class="item-text-wrap" ng-repeat="data in storedData track by $index">
+          <p>{{data.name}}</p> 
+        </ion-item>
+      </p>
+
+    <div class="add-data">
+
+
+
+    <h4><i class="ion-plus"></i>  Add Data</h4> 
+    <br>
+      <label class="item item-input">
+        <input type="text" placeholder="New Phrase" ng-model="ctrlData.newPhrase.name">
+        <button class="button" ng-click="addData()">Submit</button>
+      </label>
+    <br>
+    
+
+    </div>
+    <hr> 
+ 
+
+  </ion-content>
+</ion-view>
